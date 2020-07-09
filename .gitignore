@@ -1,2 +1,4 @@
 *pth
 *JPEG
+**/__pycache__/
+.idea/
