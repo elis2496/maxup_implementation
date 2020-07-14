@@ -16,9 +16,11 @@ Python 3.7.7
 
 Аргументы:
 
-* ```m``` - число аугментаций Cutout для Maxup;
+* ```cutmix``` - использовать ли CutMix;
+* ```m``` - число аугментаций CutMix для Maxup;
 * ```device``` - использовать CPU или GPU;
-* ```result_path``` - директория для сохранения весов модели.
+* ```epochs``` - число эпох;
+* ```pretrained_weights``` - путь к весам предобученной модели.
 
 #### Оценка качества
 
@@ -35,16 +37,17 @@ Python 3.7.7
 
 |  | Accuracy, % |
 | :---: | :---: |
-| Resnet34 |  |
-| Resnet34 + CutMix|  |
-| Resnet34 + MaxUp+CutMix, m=4 |  |
-
+| Resnet34 | 98.5 |
+| Resnet34 + CutMix| 97.49 |
+| Resnet34 + MaxUp+CutMix, m=4 | 96.83 |
+| Resnet34 + MaxUp+CutMix, m=4, fine-tuned| 97.02 |
 
 Веса моделей:
  
- * Resnet34:
+ * Resnet34: ```./result/Base_exp/weights.pth```
 
- * Resnet34 + CutMix (m=1):
+ * Resnet34 + CutMix (m=1): ```./result/Cutmix_exp/weights.pth```
 
- * Resnet34 + MaxUp+CutMix, m=4:
+ * Resnet34 + MaxUp+CutMix, m=4: ```./result/Cutmix_maxup_4_exp/weights.pth```
 
+ * Resnet34 + MaxUp+CutMix, m=4 (fine-tuned): ```./result/Cutmix_maxup_4_exp/weights.pth```
