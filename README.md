@@ -42,6 +42,8 @@ Python 3.7.7
 | Resnet34 + MaxUp+CutMix, m=4 | 96.83 |
 | Resnet34 + MaxUp+CutMix, m=4, fine-tuned| 97.02 |
 
+---------------------
+
 Веса моделей:
  
  * Resnet34: ```./result/Base_exp/weights.pth```
